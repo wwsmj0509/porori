@@ -13,12 +13,11 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/Users/kimkyungmin/Desktop/lib/cos.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kimkyungmin/Desktop/lib/jstl.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kimkyungmin/Desktop/lib/mybatis-3.4.6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kimkyungmin/Desktop/lib/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kimkyungmin/Desktop/lib/ojdbc8.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kimkyungmin/Desktop/lib/standard.jar"/>
-	<classpathentry kind="lib" path="C:/Users/kimkyungmin/Desktop/lib/xalan.jar"/>
+	<classpathentry kind="lib" path="/Users/minji/Downloads/cos.jar"/>
+	<classpathentry kind="lib" path="/Users/minji/Downloads/jstl.jar"/>
+	<classpathentry kind="lib" path="/Users/minji/Downloads/mybatis-3.4.6.jar"/>
+	<classpathentry kind="lib" path="/Users/minji/Downloads/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="/Users/minji/Downloads/standard.jar"/>
+	<classpathentry kind="lib" path="/Users/minji/Downloads/xalan.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>
