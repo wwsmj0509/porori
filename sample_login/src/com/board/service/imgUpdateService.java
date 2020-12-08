@@ -19,12 +19,12 @@ public class imgUpdateService implements CommandAction{
 		imgBoard_entity dto = new imgBoard_entity();
 		dto.setIdx(Integer.parseInt(request.getParameter("idx")));
 		dto.setUserid(request.getParameter("userid"));
-		dto.setTitle(request.getParameter("title"));
+	//	dto.setTitle(request.getParameter("title"));
 		dto.setContent(request.getParameter("content"));
 		
 		imgBoard_dao boardDAO = new imgBoard_dao();
-		int n = boardDAO.boardUpdate(dto);
-		
+		int n =0;
+				// boardDAO.boardUpdate(dto);
 		
 		if(n > 0) {
 			request.setAttribute("updateOK", n);

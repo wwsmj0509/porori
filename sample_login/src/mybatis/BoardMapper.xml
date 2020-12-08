@@ -4,7 +4,7 @@
 
 <mapper namespace="mybatis.BoardMapper">
 
-	
+	<!-- 
 	<select id="getBoardList" resultType="BoardDTO">
 		<![CDATA[
 			SELECT * FROM BOARDTEST ORDER BY IDX DESC
@@ -24,14 +24,14 @@
 		]]>
 	</select>
 	
-	<!--이미지보드 맵퍼 수정-->
+	이미지보드 맵퍼 수정
 	
 	<update id="getUpdateUser" parameterType="BoardDTO">
 		<![CDATA[
 			UPDATE BOARDTEST SET TITLE=#{title}, CONTENT=#{content} WHERE IDX=#{idx}
 		]]>
 	</update>
-	
+	 -->
 	
 	
 

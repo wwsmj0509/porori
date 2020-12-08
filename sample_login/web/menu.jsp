@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 <link href="../style.css" rel="stylesheet" type="text/css">
 <link href="style.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
 </head>
 

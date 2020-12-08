@@ -13,11 +13,10 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="/Users/minji/Downloads/cos.jar"/>
-	<classpathentry kind="lib" path="/Users/minji/Downloads/jstl.jar"/>
-	<classpathentry kind="lib" path="/Users/minji/Downloads/mybatis-3.4.6.jar"/>
-	<classpathentry kind="lib" path="/Users/minji/Downloads/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="/Users/minji/Downloads/standard.jar"/>
-	<classpathentry kind="lib" path="/Users/minji/Downloads/xalan.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kkm/Desktop/프로젝트lib/cos.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kkm/Desktop/프로젝트lib/jstl.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kkm/Desktop/프로젝트lib/mybatis-3.4.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kkm/Desktop/프로젝트lib/standard.jar"/>
+	<classpathentry kind="lib" path="C:/Users/kkm/Desktop/프로젝트lib/xalan.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

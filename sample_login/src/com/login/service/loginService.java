@@ -23,15 +23,21 @@ public class loginService implements CommandAction{
 		login_dao dao = new login_dao();
 		login_entity entity = dao.getUser(id,pwd);
 		
-		
+		HttpSession session=request.getSession();
+
 		if(entity != null) {
 			//세션설정
-			HttpSession session=request.getSession();
-			session.setAttribute("logOK", entity);
+			System.out.println("로그인성공");
+			session.setAttribute("logOK", entity);  //로그인 세션 생성
 			return "boardList.do";
 		}else {
+			String noUser="없는 사용자입니다.";
+			session.setAttribute("errMsg", noUser); 
 			return "login.jsp";
 		}
+		
+		
+		
 	}
 
 	

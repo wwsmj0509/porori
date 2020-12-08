@@ -6,12 +6,25 @@
 	<select id="getLoginUser" parameterType="LoginDTO" resultType="LoginDTO">
 		<![CDATA[
 			SELECT * 
-			FROM USERSTEST WHERE ID=#{id} AND PWD=#{pwd}
+			FROM USERLIST WHERE USERID=#{userid} AND PWD=#{pwd}
 		]]>
 	</select>
-	<insert id="getJoinUser" parameterType="LoginDTO">
+	
+	<insert id="JoinUser" parameterType="LoginDTO">
 		<![CDATA[
-			INSERT INTO USERSTEST VALUES(#{id},#{pwd},#{name})
+			INSERT INTO USERLIST(USERID,PWD,NAME,EMAIL,ADDRESS,CHK) VALUES(#{userid},#{pwd},#{name},#{email},#{address},#{chk})
 			]]>
 	</insert>
+	
+	
+	<select id="userExist" parameterType="String" resultType="LoginDTO">
+	<![CDATA[
+	
+		SELECT * FROM USERLIST WHERE USERID=#{userid}
+	
+	
+	]]>
+	
+	
+	</select>
 </mapper>
