@@ -12,14 +12,19 @@
 	
 <!-- 	<insert id="getInsertUser" parameterType="BoardDTO"> -->
 <!-- 		<![CDATA[ -->
-<!-- 			INSERT INTO BOARDLIST(idx,userid,imagepath,content,logtime) -->
-<!-- 			VALUES(BOARD_SEQ.NEXTVAL,#{userid},#{imagepath},#{content},#(logtime}) -->
-<!-- 		]]> -->
+<!--  			INSERT INTO BOARDLIST(idx,userid,imagepath,content,logtime) -->
+<!--  			VALUES(BOARD_SEQ.NEXTVAL,#{userid},#{imagepath},#{content},#(logtime}) -->
+<!--  		]]> -->
 <!-- 	</insert> -->
 	
 	<select id="getBoardView" resultType="BoardDTO">
 		<![CDATA[
 			SELECT * FROM BOARDLIST WHERE IDX=#{idx}
+		]]>
+	</select>
+	<select id="getProfileList" resultType="BoardDTO">
+		<![CDATA[
+			SELECT * FROM BOARDLIST WHERE USERID=#{userid}
 		]]>
 	</select>
 	

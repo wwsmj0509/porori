@@ -15,6 +15,19 @@ public class login_entity {
 	public login_entity() {
 		super();
 	}
+	
+	public login_entity(String userid, String pwd, String name, String email, String address, String chk,
+			String profileimg) {
+		super();
+		this.userid = userid;
+		this.pwd = pwd;
+		this.name = name;
+		this.email = email;
+		this.address = address;
+		this.chk = chk;
+		this.profileimg = profileimg;
+	}
+
 	public String getProfileimg() {
 		return profileimg;
 	}

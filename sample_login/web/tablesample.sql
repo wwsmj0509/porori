@@ -40,7 +40,7 @@ content varchar2(200),		--글내용
 logtime DATE DEFAULT SYSDATE);
 
 insert into boardlist(idx,userid,imgpath,content,logtime)
-values(board_seq.nextval,'admin','1.jpg','testupload',SYSDATE);
+				values(board_seq.nextval,'admin','1.jpg','testupload',SYSDATE);
 insert into boardlist(idx,userid,imgpath,content,logtime)
 values(board_seq.nextval,'admin','2.jpg','testupload2',SYSDATE);
 insert into boardlist(idx,userid,imgpath,content,logtime)

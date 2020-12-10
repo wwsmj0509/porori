@@ -26,7 +26,10 @@ public class login_dao {
 
 	public login_entity getUser(String id, String pwd) {
 		SqlSession session = factory.openSession();
-		login_entity logEntity = new login_entity(id, pwd);
+		login_entity logEntity = new login_entity();
+		
+		logEntity.setUserid(id);
+		logEntity.setPwd(pwd);
 
 		System.out.println(logEntity.getUserid());
 		System.out.println(logEntity.getPwd());
