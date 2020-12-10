@@ -4,40 +4,33 @@
 
 <mapper namespace="mybatis.BoardMapper">
 
-	<!-- 
 	<select id="getBoardList" resultType="BoardDTO">
 		<![CDATA[
-			SELECT * FROM BOARDTEST ORDER BY IDX DESC
+			SELECT * FROM BOARDLIST ORDER BY IDX DESC
 		]]>
 	</select>
 	
-	<insert id="getInsertUser" parameterType="BoardDTO">
-		<![CDATA[
-			INSERT INTO BOARDTEST 
-			VALUES(BOARD_SEQ.NEXTVAL,#{userid},#{title},#{content})
-		]]>
-	</insert>
+<!-- 	<insert id="getInsertUser" parameterType="BoardDTO"> -->
+<!-- 		<![CDATA[ -->
+<!-- 			INSERT INTO BOARDLIST(idx,userid,imagepath,content,logtime) -->
+<!-- 			VALUES(BOARD_SEQ.NEXTVAL,#{userid},#{imagepath},#{content},#(logtime}) -->
+<!-- 		]]> -->
+<!-- 	</insert> -->
 	
 	<select id="getBoardView" resultType="BoardDTO">
 		<![CDATA[
-			SELECT * FROM BOARDTEST WHERE IDX=#{idx}
+			SELECT * FROM BOARDLIST WHERE IDX=#{idx}
 		]]>
 	</select>
 	
-	이미지보드 맵퍼 수정
 	
 	<update id="getUpdateUser" parameterType="BoardDTO">
 		<![CDATA[
-			UPDATE BOARDTEST SET TITLE=#{title}, CONTENT=#{content} WHERE IDX=#{idx}
+			UPDATE BOARDLIST SET TITLE=#{title}, CONTENT=#{content} WHERE IDX=#{idx}
 		]]>
 	</update>
-	 -->
 	
-	
-
 </mapper>
-
-
 
 
 

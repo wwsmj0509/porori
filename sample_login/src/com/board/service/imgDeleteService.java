@@ -9,30 +9,28 @@ import org.apache.ibatis.session.SqlSession;
 import com.board.dao.imgBoard_dao;
 import com.board.entity.imgBoard_entity;
 import com.login.entity.login_entity;
+import com.reply.dao.imgReply_dao;
 
 import controller.CommandAction;
 
-public class imgInsertService implements CommandAction{
+public class imgDeleteService implements CommandAction{
 
 	@Override
 	public String requestPro_action(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		request.setCharacterEncoding("UTF-8");
-		System.out.println("insert enter");
+		System.out.println("delete enter");
 		
-		imgBoard_entity dto = new imgBoard_entity();
-		dto.setUserid(request.getParameter("userid"));
-		//dto.setTitle(request.getParameter("title"));
-		dto.setContent(request.getParameter("content"));
+		int boardIdx = (Integer)request.getAttribute("idx");
 		
-		imgBoard_dao boardDAO = new imgBoard_dao();
+		imgBoard_dao dao= new imgBoard_dao();
 		int n = 0;
-				boardDAO.boardInsert(dto);
+//		dao.boardDelte(boardIdx);
 		
 		if(n > 0) {
-			request.setAttribute("insertOK", n);
+			request.setAttribute("deleteOK", n);
 			return "boardList.do";
 		}else {
-			return "write/user_write.jsp";
+			return "boardView.do?idx="+boardIdx;
 		}
 	}
 

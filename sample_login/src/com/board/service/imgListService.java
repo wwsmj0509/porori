@@ -17,13 +17,13 @@ public class imgListService implements CommandAction {
 	@Override
 	public String requestPro_action(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		
-		System.out.println("보드");
-		
 		imgBoard_dao dao = new imgBoard_dao();
-		//List<imgBoard_entity> list = dao.getUserList();
+		List<imgBoard_entity> list = dao.getUserList();
 		
 		
-		//request.setAttribute("list", list);
+		System.out.println("ggg"+list.get(1).getImgPath());
+		
+		request.setAttribute("list", list);
 		
 		return "board.jsp";
 	}

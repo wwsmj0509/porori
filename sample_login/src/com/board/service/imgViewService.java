@@ -20,15 +20,15 @@ public class imgViewService implements CommandAction {
 		System.out.println(idx);
 		
 		imgBoard_dao dao = new imgBoard_dao();
-		//imgBoard_entity dto = dao.getUserView(idx);
+		imgBoard_entity dto = dao.getUserView(idx);
 		
 		
 		HttpSession session = request.getSession();
-		//session.setAttribute("view", dto);
+		session.setAttribute("boardView", dto);
 		session.setAttribute("idx", idx);
 		
 		
-		return "view/post.jsp";
+		return "replyList.do";
 	}
 
 }

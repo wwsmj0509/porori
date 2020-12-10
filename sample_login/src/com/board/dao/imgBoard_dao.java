@@ -40,58 +40,62 @@ public class imgBoard_dao {
 	
 	
 	//write -----------------------------------------------------------------
-//	public int boardInsert(imgBoard_entity dto) {
-//		SqlSession session=factory.openSession();
-//		int n = 0;
-//		
-//		try {
-//			n = session.insert("mybatis.BoardMapper.getInsertUser",dto);
-//			if(n > 0) {
-//				session.commit();
-//			}
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//			session.rollback();
-//		}finally {
-//			session.close();
-//		}
-//		System.out.println(" User Write OK");
-//		return n;
-//		
-//	}
-//	//List -----------------------------------------------------------------
-//	public List<imgBoard_entity> getUserList() {
-//		SqlSession session = factory.openSession();
-//		List<imgBoard_entity> list = session.selectList("mybatis.BoardMapper.getBoardList");
-//		
-//		session.close();
-//		return list;
-//	}
-//	//View -----------------------------------------------------------------
-//	public imgBoard_entity getUserView(int idx) {
-//		SqlSession session = factory.openSession();
-//		imgBoard_entity dto = session.selectOne("mybatis.BoardMapper.getBoardView",idx);
-//		
-//		session.close();
-//		return dto;
-//	}
-//	public int boardUpdate(imgBoard_entity dto) {
-//		SqlSession session=factory.openSession();
-//		int n = 0;
-//		
-//		try {
-//			n = session.insert("mybatis.BoardMapper.getUpdateUser",dto);
-//			if(n > 0) {
-//				session.commit();
-//			}
-//		}catch(Exception e) {
-//			e.printStackTrace();
-//			session.rollback();
-//		}finally {
-//			session.close();
-//		}
-//		System.out.println(" User Update OK");
-//		return n;
-//	}
+	public int boardInsert(imgBoard_entity dto) {
+		SqlSession session=factory.openSession();
+		int n = 0;
+		
+		try {
+			n = session.insert("mybatis.BoardMapper.getInsertUser",dto);
+			if(n > 0) {
+				session.commit();
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+			session.rollback();
+		}finally {
+			session.close();
+		}
+		System.out.println(" User Write OK");
+		return n;
+		
+	}
+	//List -----------------------------------------------------------------
+	public List<imgBoard_entity> getUserList() {
+		SqlSession session = factory.openSession();
+		List<imgBoard_entity> list = session.selectList("mybatis.BoardMapper.getBoardList");
+		
+		session.close();
+		return list;
+	}
+	//View -----------------------------------------------------------------
+	public imgBoard_entity getUserView(int idx) {
+		SqlSession session = factory.openSession();
+		imgBoard_entity dto = session.selectOne("mybatis.BoardMapper.getBoardView",idx);
+		
+		session.close();
+		return dto;
+	}
+	
+	//Update -----------------------------------------------------------------
+	public int boardUpdate(imgBoard_entity dto) {
+		SqlSession session=factory.openSession();
+		int n = 0;
+		
+		try {
+			n = session.insert("mybatis.BoardMapper.getUpdateUser",dto);
+			if(n > 0) {
+				session.commit();
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+			session.rollback();
+		}finally {
+			session.close();
+		}
+		System.out.println(" User Update OK");
+		return n;
+	}
+
+	//Delete -----------------------------------------------------------------
 
 }

@@ -1,33 +1,32 @@
-package com.board.entity;
+package com.reply.entity;
 
-public class imgBoard_entity {
+public class imgReply_entity {
 	
 	
 	private int idx;
-	private String userid;
+	private int boardidx;
+	private String writeid;
 	private String content;
-	private String imgPath;
 	private String logtime;
 	
 	
-	
-	public String getImgPath() {
-		return imgPath;
+	public String getWriteid() {
+		return writeid;
 	}
-	public void setImgPath(String imgPath) {
-		this.imgPath = imgPath;
+	public void setWriteid(String writeid) {
+		this.writeid = writeid;
+	}
+	public int getBoardidx() {
+		return boardidx;
+	}
+	public void setBoardidx(int boardidx) {
+		this.boardidx = boardidx;
 	}
 	public int getIdx() {
 		return idx;
 	}
 	public void setIdx(int idx) {
 		this.idx = idx;
-	}
-	public String getUserid() {
-		return userid;
-	}
-	public void setUserid(String userid) {
-		this.userid = userid;
 	}
 	public String getContent() {
 		return content;
