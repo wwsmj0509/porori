@@ -23,7 +23,7 @@ function checkBoardWrite(){
 	<table border="0" >
 	   <tr>
 	      <td>아이디</td>
-	      <td><input type="text" name="userid" size="55"  value="${logOK.id}" readonly></td>
+	      <td><input type="text" name="userid" size="55"  value="${logOK.userid}" readonly></td>
 	   </tr>
 	   <tr>
 	      <td>이름</td>
@@ -37,6 +37,11 @@ function checkBoardWrite(){
 	   <tr>
 	      <td>내 용</td>
 	      <td><textarea name="content" cols="47" rows="10"></textarea></td>
+	   </tr>
+	   
+	   <tr>
+			<td><b>이미지</b></td>
+			<td><input type="file" name="imagepath" size="55"></td>
 	   </tr>
 	   
 	   <tr>
