@@ -23,7 +23,7 @@ public class imgListService implements CommandAction {
 
 		//imgBoard_dao 인데   메소드이름은 getUserList 이다. 수정 필요 ,  getUserList의 맵퍼 id는 또 boardList 와  관련되어있음 이름 통일 필요
 		
-		//test
+		//test test setswetasdfsd
 		
 		
 		request.setAttribute("list", list);
