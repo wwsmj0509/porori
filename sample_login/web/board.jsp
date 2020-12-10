@@ -4,7 +4,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <jsp:include page="menu.jsp"/>
 
-
 <c:if test="${!empty list }">
 	<c:forEach items="${list }" var="imgBoard">
 	<div>
