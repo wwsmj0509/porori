@@ -18,31 +18,22 @@ public class joinService implements CommandAction{
 		System.out.println("회원가입 service");
 		////////////////////////////////////
 		
-		String userid=request.getParameter("input_id");
-		String pwd=request.getParameter("input_pwd");
-		String name=request.getParameter("input_name");
-		String email=request.getParameter("input_email");
-		String address=request.getParameter("input_address");
-		String chk=request.getParameter("input_chk");
+		login_entity entity = new login_entity();
 		
-
-//		System.out.println(userid);
-//		System.out.println(pwd);
-//		System.out.println(name);
-//		System.out.println(email);
-//		System.out.println(address);
-//		System.out.println(chk);
-		
+		entity.setUserid(request.getParameter("input_id"));
+		entity.setPwd(request.getParameter("input_pwd"));
+		entity.setName(request.getParameter("input_name"));
+		entity.setEmail(request.getParameter("input_email"));
+		entity.setAddress(request.getParameter("input_address"));
+		entity.setProfileimg(request.getParameter("profileinmg"));
+		entity.setChk(request.getParameter("input_chk"));
 		
 		login_dao dao = new login_dao();
 		
-		login_entity entity = dao.existCheck(userid);
+		int n = dao.existCheck(entity.getUserid());
 		
-		int n =0;
-		
-		
-		if(entity==null) {
-			n= dao.getJoin(userid,pwd,name,email,address,chk);
+		if(n > 0) {
+			entity = dao.getJoin(entity);
 			System.out.println("n : "+n);
 			return "login.jsp";
 		}else {
