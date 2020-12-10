@@ -22,7 +22,7 @@ public class loginService implements CommandAction{
 		
 		login_dao dao = new login_dao();
 		login_entity entity = dao.getUser(id,pwd);
-		
+			
 		HttpSession session=request.getSession();
 
 		if(entity != null) {
@@ -35,9 +35,6 @@ public class loginService implements CommandAction{
 			session.setAttribute("errMsg", noUser); 
 			return "login.jsp";
 		}
-		
-		
-		
 	}
 
 	

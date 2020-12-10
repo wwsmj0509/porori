@@ -37,10 +37,10 @@ public class login_dao {
 		return entity;
 	}
 
-	public int getJoin(String userid, String pwd, String name, String email, String address,String chk) {
+	public int getJoin(String userid, String pwd, String name, String email, String address,String chk, String profileimg) {
 		
 		SqlSession session = factory.openSession();
-		login_entity logEntity = new login_entity(userid, pwd, name, email,address, chk);
+		login_entity logEntity = new login_entity(userid, pwd, name, email,address, chk,profileimg);
 
 		int n = 0;
 		try {

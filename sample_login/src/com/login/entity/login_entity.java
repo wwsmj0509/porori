@@ -8,20 +8,14 @@ public class login_entity {
 	private String email;
 	private String address;
 	private String chk;
-	
-	
-	
-
+	private String profileimg="";
 	public login_entity(String userid, String pwd) {
 		super();
 		this.userid = userid;
 		this.pwd = pwd;
 	}
-	
-
-	
-	
-	public login_entity(String userid, String pwd, String name, String email, String address, String chk) {
+	public login_entity(String userid, String pwd, String name, String email, String address, String chk,
+			String profileimg) {
 		super();
 		this.userid = userid;
 		this.pwd = pwd;
@@ -29,11 +23,8 @@ public class login_entity {
 		this.email = email;
 		this.address = address;
 		this.chk = chk;
+		this.profileimg = profileimg;
 	}
-
-
-
-
 	public String getUserid() {
 		return userid;
 	}
@@ -70,13 +61,12 @@ public class login_entity {
 	public void setChk(String chk) {
 		this.chk = chk;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+	public String getProfileimg() {
+		return profileimg;
+	}
+	public void setProfileimg(String profileimg) {
+		this.profileimg = profileimg;
+	}
+
 
 }

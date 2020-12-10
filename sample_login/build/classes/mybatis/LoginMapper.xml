@@ -12,7 +12,7 @@
 	
 	<insert id="JoinUser" parameterType="LoginDTO">
 		<![CDATA[
-			INSERT INTO USERLIST(USERID,PWD,NAME,EMAIL,ADDRESS,CHK) VALUES(#{userid},#{pwd},#{name},#{email},#{address},#{chk})
+			INSERT INTO USERLIST(USERID,PWD,NAME,EMAIL,ADDRESS,CHK,PROFILEIMG) VALUES(#{userid},#{pwd},#{name},#{email},#{address},#{chk},#{profileimg})
 			]]>
 	</insert>
 	

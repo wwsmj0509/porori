@@ -24,7 +24,7 @@ public class imgUpdateService implements CommandAction{
 		
 		imgBoard_dao boardDAO = new imgBoard_dao();
 		int n =0;
-				 boardDAO.boardUpdate(dto);
+				// boardDAO.boardUpdate(dto);
 		
 		if(n > 0) {
 			request.setAttribute("updateOK", n);

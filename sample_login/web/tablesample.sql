@@ -4,18 +4,21 @@ select * from tab;
 
 drop table userstest purge;
 
-select * from userstest;
+select * from userlist;
 
-insert into userstest(id,pwd,name) values('admin','1111','어드민');
+select profileimg from userlist where userid='hi'
+
+insert into userlist(userid,pwd,name) values('hi','1234','어드민');
 
 create sequence board_seq increment by 1  start with 1 nocycle nocache;
-
-insert into boardtest(idx,userid,title,content) values(board_seq.nextval,'admin','test1','test11');
-
+SELECT * FROM BOARDLIST WHERE USERID='hi' 
+SELECT PROFILEIMG FROM BOARDLIST WHERE USERID='hi' 
+insert into boardlist(idx,userid,content,img,logtime) values(board_seq.nextval,'hi','test','/insta/upload/dog.jpg','2019-01-01');
+select * from boardlist;
 drop sequence board_seq;
 drop table boardtest purge;
 
-
+update userlist set profileimg = 'dog.jpg'
 select * from boardtest;
 
 
@@ -25,50 +28,41 @@ create table userlist(
 userid varchar2(15) primary key,
 pwd varchar2(12) not null,
 name varchar2(20) not null,
-email varchar2(20) not null,
+email varchar2(100) not null,
 address varchar2(160),
-chk varchar2(12));
+chk varchar2(12),
+profileimg varchar2(100));
 
-insert into userlist(userid,pwd,name,email,address,chk) values('admin','1111','어드민',' ',' ','master');
+
+
 
 create table boardlist(
 idx number(6) primary key,		--글번호
-userid varchar2(15) not null,	--유져이름
-imgpath varchar2(80),   -- 이미지 경로
+userid varchar2(15)not null,	--유져이름
 content varchar2(200),		--글내용
+img varchar2(200),
 logtime DATE DEFAULT SYSDATE);
 
-insert into boardlist(idx,userid,imgpath,content,logtime)
-values(board_seq.nextval,'admin','1.jpg','testupload',SYSDATE);
-insert into boardlist(idx,userid,imgpath,content,logtime)
-values(board_seq.nextval,'admin','2.jpg','testupload2',SYSDATE);
-insert into boardlist(idx,userid,imgpath,content,logtime)
-values(board_seq.nextval,'admin','3.jpg','testupload3',SYSDATE);
+
 
 
 create table reply(
-idx number(6) primary key,	
-boardidx number(6) not null ,
-writeid varchar2(15) not null,
-content varchar2(200),
-logtime DATE DEFAULT SYSDATE);
+idx number(6)	primary key	
+boardidx number(6)not null ,
+content varchar2(200)),
+logtime DATE DEFAUKY SYSDATE);
 
-
-drop table boardlist purge;
 
 
 create sequence board_seq increment by 1 start with 1 nocycle nocache;
 create sequence reply_seq increment by 1 start with 1 nocycle nocache;
 
-delete
-
-select * from tab;
 select * from userlist ;
 select * from boardlist;
-select * from reply;
-
+delete from USERLIST where pwd='1234';
+drop table boardlist;
 drop table userlist;
 
 
-SELECT * FROM REPLY WHERE boardidx=3 ORDER BY IDX DESC;
+
 

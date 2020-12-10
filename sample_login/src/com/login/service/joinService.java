@@ -24,7 +24,7 @@ public class joinService implements CommandAction{
 		String email=request.getParameter("input_email");
 		String address=request.getParameter("input_address");
 		String chk=request.getParameter("input_chk");
-		
+		String profileimg="";
 
 //		System.out.println(userid);
 //		System.out.println(pwd);
@@ -42,7 +42,7 @@ public class joinService implements CommandAction{
 		
 		
 		if(entity==null) {
-			n= dao.getJoin(userid,pwd,name,email,address,chk);
+			n= dao.getJoin(userid,pwd,name,email,address,chk, profileimg);
 			System.out.println("n : "+n);
 			return "login.jsp";
 		}else {

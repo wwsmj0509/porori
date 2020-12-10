@@ -26,7 +26,7 @@ public class imgInsertService implements CommandAction{
 		
 		imgBoard_dao boardDAO = new imgBoard_dao();
 		int n = 0;
-				boardDAO.boardInsert(dto);
+				//boardDAO.boardInsert(dto);
 		
 		if(n > 0) {
 			request.setAttribute("insertOK", n);

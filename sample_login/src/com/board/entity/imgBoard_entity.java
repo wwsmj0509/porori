@@ -6,16 +6,18 @@ public class imgBoard_entity {
 	private int idx;
 	private String userid;
 	private String content;
-	private String imgPath;
+	private String img;
 	private String logtime;
-	
-	
-	
-	public String getImgPath() {
-		return imgPath;
+	public imgBoard_entity() {
+		super();
 	}
-	public void setImgPath(String imgPath) {
-		this.imgPath = imgPath;
+	public imgBoard_entity(int idx, String userid, String content, String img, String logtime) {
+		super();
+		this.idx = idx;
+		this.userid = userid;
+		this.content = content;
+		this.img = img;
+		this.logtime = logtime;
 	}
 	public int getIdx() {
 		return idx;
@@ -35,17 +37,16 @@ public class imgBoard_entity {
 	public void setContent(String content) {
 		this.content = content;
 	}
+	public String getImg() {
+		return img;
+	}
+	public void setImg(String img) {
+		this.img = img;
+	}
 	public String getLogtime() {
 		return logtime;
 	}
 	public void setLogtime(String logtime) {
 		this.logtime = logtime;
 	}
-	
-	
-	
-	
-	
-	
-
 }
