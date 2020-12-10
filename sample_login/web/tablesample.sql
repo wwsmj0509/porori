@@ -25,11 +25,12 @@ create table userlist(
 userid varchar2(15) primary key,
 pwd varchar2(12) not null,
 name varchar2(20) not null,
-email varchar2(20) not null,
+email varchar2(100) not null,
 address varchar2(160),
+profileimg varchar2(100),
 chk varchar2(12));
 
-insert into userlist(userid,pwd,name,email,address,chk) values('admin','1111','어드민',' ',' ','master');
+insert into userlist(userid,pwd,name,email,address,profileimg,chk) values('admin','1111','어드민',' ',' ',' ','master');
 
 create table boardlist(
 idx number(6) primary key,		--글번호
@@ -39,7 +40,7 @@ content varchar2(200),		--글내용
 logtime DATE DEFAULT SYSDATE);
 
 insert into boardlist(idx,userid,imgpath,content,logtime)
-values(board_seq.nextval,'admin','1.jpg','testupload',SYSDATE);
+				values(board_seq.nextval,'admin','1.jpg','testupload',SYSDATE);
 insert into boardlist(idx,userid,imgpath,content,logtime)
 values(board_seq.nextval,'admin','2.jpg','testupload2',SYSDATE);
 insert into boardlist(idx,userid,imgpath,content,logtime)
@@ -67,7 +68,7 @@ select * from userlist ;
 select * from boardlist;
 select * from reply;
 
-drop table userlist;
+drop table userlist purge;
 
 
 SELECT * FROM REPLY WHERE boardidx=3 ORDER BY IDX DESC;

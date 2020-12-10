@@ -123,6 +123,15 @@ public class imgBoard_dao {
 		return n;
 	}
 
+
+	public List<imgBoard_entity> getProfileList(String userid) {
+		SqlSession session = factory.openSession();
+		List<imgBoard_entity> polist = session.selectList("mybatis.BoardMapper.getProfileList",userid);
+		
+		session.close();
+		return polist;
+	}
+
 	//Delete -----------------------------------------------------------------
 
 }

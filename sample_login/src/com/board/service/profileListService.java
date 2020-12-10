@@ -12,19 +12,20 @@ import com.board.entity.imgBoard_entity;
 
 import controller.CommandAction;
 
-public class imgListService implements CommandAction {
+public class profileListService implements CommandAction {
 
 	@Override
 	public String requestPro_action(HttpServletRequest request, HttpServletResponse response) throws Throwable {
 		
+		String userid = request.getParameter("id");
+		
 		imgBoard_dao dao = new imgBoard_dao();
-		List<imgBoard_entity> list = dao.getUserList();
+		List<imgBoard_entity> polist = dao.getProfileList(userid);
 		
-
-		//imgBoard_dao 인데   메소드이름은 getUserList 이다. 수정 필요 ,  getUserList의 맵퍼 id는 또 boardList 와  관련되어있음 이름 통일 필요
 		
-		request.setAttribute("list", list);
 		
-		return "board.jsp";
+		request.setAttribute("polist", polist);
+		
+		return "/view/profile.jsp";
 	}
 }
