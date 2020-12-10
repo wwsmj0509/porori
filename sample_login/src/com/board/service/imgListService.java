@@ -20,8 +20,8 @@ public class imgListService implements CommandAction {
 		imgBoard_dao dao = new imgBoard_dao();
 		List<imgBoard_entity> list = dao.getUserList();
 		
-		
-		System.out.println("ggg"+list.get(1).getImgPath());
+
+		//imgBoard_dao 인데   메소드이름은 getUserList 이다. 수정 필요 ,  getUserList의 맵퍼 id는 또 boardList 와  관련되어있음 이름 통일 필요
 		
 		request.setAttribute("list", list);
 		
